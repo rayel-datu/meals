@@ -1,6 +1,6 @@
-import 'package:uni_life_exam/features/categories/entities/dto/category_dto.dart';
-import 'package:uni_life_exam/features/meals/entities/dto/meal_details_dto.dart';
-import 'package:uni_life_exam/features/meals/entities/dto/meal_item_dto.dart';
+import 'package:meal_app/features/categories/entities/dto/category_dto.dart';
+import 'package:meal_app/features/meals/entities/dto/meal_details_dto.dart';
+import 'package:meal_app/features/meals/entities/dto/meal_item_dto.dart';
 
 abstract class MealApi {
   Future<CategoryDto> getCategories();

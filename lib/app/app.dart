@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uni_life_exam/app/utilities/dependencies.dart';
+import 'package:meal_app/app/utilities/dependencies.dart';
 
 class MealApp extends StatefulWidget {
   const MealApp({super.key});

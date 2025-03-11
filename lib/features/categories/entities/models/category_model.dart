@@ -1,6 +1,7 @@
-import 'package:uni_life_exam/features/categories/entities/dto/category_dto.dart';
+import 'package:meal_app/app/entities/base_model.dart';
+import 'package:meal_app/features/categories/entities/dto/category_dto.dart';
 
-class CategoryModel {
+class CategoryModel implements SearchableModel {
   final String category;
   final String thumbnail;
   final String description;
@@ -11,4 +12,7 @@ class CategoryModel {
     dto.strCategoryThumb,
     dto.strCategoryDescription,
   );
+
+  @override
+  String searchProp() => category;
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uni_life_exam/app/app.dart';
+import 'package:meal_app/app/app.dart';
 
 void main() {
   runApp(MealApp());

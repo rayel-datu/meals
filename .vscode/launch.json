@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "uni_life_exam",
+            "name": "meal_app",
             "request": "launch",
             "type": "dart",
             "args": [
@@ -13,13 +13,13 @@
             ]
         },
         {
-            "name": "uni_life_exam (profile mode)",
+            "name": "meal_app (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "uni_life_exam (release mode)",
+            "name": "meal_app (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

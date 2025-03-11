@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:get_it/get_it.dart';
-import 'package:uni_life_exam/app/error/meal_exceptions.dart';
-import 'package:uni_life_exam/app/data/meal_api.dart';
-import 'package:uni_life_exam/features/categories/entities/models/category_model.dart';
+import 'package:meal_app/app/error/meal_exceptions.dart';
+import 'package:meal_app/app/data/meal_api.dart';
+import 'package:meal_app/features/categories/entities/models/category_model.dart';
 
 class CategoryRepository {
   CategoryRepository({MealApi? mealApi})
