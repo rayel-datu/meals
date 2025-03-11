@@ -1,4 +1,4 @@
-import 'package:uni_life_exam/features/categories/entities/dto/meal_details_dto.dart';
+import 'package:uni_life_exam/features/meals/entities/dto/meal_details_dto.dart';
 
 class MealDetailsModel {
   final String? name;
