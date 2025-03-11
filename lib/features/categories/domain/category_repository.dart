@@ -9,15 +9,25 @@ class CategoryRepository {
   @visibleForTesting
   final MealApi mealApi;
 
-  List<CategoryModel>? _categories;
+  @visibleForTesting
+  List<CategoryModel>? categories;
 
-  /// Get categories either from memory [_categories] or from internet by setting [refresh] to true
+  /// Get categories either from memory [categories] or from internet by setting [refresh] to true
   Future<List<CategoryModel>> getCategories({bool refresh = false}) async {
     try {
-      if (_categories == null || refresh) {
+      if (categories == null || refresh) {
         final dto = await mealApi.getCategories();
+
+        if (dto.categories.isEmpty) {
+          throw EmptyResponseException();
+        }
+
+        categories =
+            dto.categories.map((e) => CategoryModel.fromDto(e)).toList();
       }
-      return _categories ?? [];
+      return categories ?? [];
+    } on MealException {
+      rethrow;
     } catch (e) {
       throw UnknownMealException();
     }
