@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:uni_life_exam/app/data/meal_api.dart';
 import 'package:uni_life_exam/app/error/meal_exceptions.dart';
@@ -9,7 +10,10 @@ class MealRepository {
     : mealApi = mealApi ?? GetIt.instance.get<MealApi>();
   final MealApi mealApi;
 
+  @visibleForTesting
   Map<String, List<MealItemModel>> mealsCache = {};
+
+  @visibleForTesting
   Map<String, List<MealDetailsModel>> mealDetailsCache = {};
 
   /// Get categories either from memory [mealsCache] or from internet by setting [refresh] to true
