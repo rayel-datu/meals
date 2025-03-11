@@ -20,7 +20,7 @@ class MealDetailsModel {
   );
 
   // Create a model based on the json to a more useable
-  factory MealDetailsModel.fromDto(MealDetailsDto dto) {
+  factory MealDetailsModel.fromDto(MealDetailsItemDto dto) {
     // create list based on the json response (20 ingredients and 20 measurement)
     final ingredients = [
       MealIngredient(dto.strIngredient1 ?? '', dto.strMeasure1 ?? ''),

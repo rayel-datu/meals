@@ -6,7 +6,7 @@ class CategoryModel {
   final String description;
 
   CategoryModel(this.category, this.thumbnail, this.description);
-  factory CategoryModel.fromDto(CategoryDto dto) => CategoryModel(
+  factory CategoryModel.fromDto(CategoryItemDto dto) => CategoryModel(
     dto.strCategory,
     dto.strCategoryThumb,
     dto.strCategoryDescription,

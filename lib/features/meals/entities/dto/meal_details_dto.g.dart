@@ -8,6 +8,16 @@ part of 'meal_details_dto.dart';
 
 MealDetailsDto _$MealDetailsDtoFromJson(Map<String, dynamic> json) =>
     MealDetailsDto(
+      (json['meals'] as List<dynamic>)
+          .map((e) => MealDetailsItemDto.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$MealDetailsDtoToJson(MealDetailsDto instance) =>
+    <String, dynamic>{'meals': instance.meals.map((e) => e.toJson()).toList()};
+
+MealDetailsItemDto _$MealDetailsItemDtoFromJson(Map<String, dynamic> json) =>
+    MealDetailsItemDto(
       idMeal: json['idMeal'] as String?,
       strMeal: json['strMeal'] as String?,
       strMealAlternate: json['strMealAlternate'] as String?,
@@ -64,7 +74,7 @@ MealDetailsDto _$MealDetailsDtoFromJson(Map<String, dynamic> json) =>
       dateModified: json['dateModified'] as String?,
     );
 
-Map<String, dynamic> _$MealDetailsDtoToJson(MealDetailsDto instance) =>
+Map<String, dynamic> _$MealDetailsItemDtoToJson(MealDetailsItemDto instance) =>
     <String, dynamic>{
       'idMeal': instance.idMeal,
       'strMeal': instance.strMeal,

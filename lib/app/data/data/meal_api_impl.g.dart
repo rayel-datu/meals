@@ -18,12 +18,12 @@ class _MealApiImpl implements MealApiImpl {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<List<CategoryDto>> getCategories() async {
+  Future<CategoryDto> getCategories() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<List<CategoryDto>>(
+    final _options = _setStreamType<CategoryDto>(
       Options(method: 'GET', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
@@ -33,15 +33,10 @@ class _MealApiImpl implements MealApiImpl {
           )
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
-    final _result = await _dio.fetch<List<dynamic>>(_options);
-    late List<CategoryDto> _value;
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late CategoryDto _value;
     try {
-      _value =
-          _result.data!
-              .map(
-                (dynamic i) => CategoryDto.fromJson(i as Map<String, dynamic>),
-              )
-              .toList();
+      _value = CategoryDto.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -50,12 +45,12 @@ class _MealApiImpl implements MealApiImpl {
   }
 
   @override
-  Future<List<MealDetailsDto>> getMealDetailsById(String id) async {
+  Future<MealDetailsDto> getMealDetailsById(String id) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'i': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<List<MealDetailsDto>>(
+    final _options = _setStreamType<MealDetailsDto>(
       Options(method: 'GET', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
@@ -65,16 +60,10 @@ class _MealApiImpl implements MealApiImpl {
           )
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
-    final _result = await _dio.fetch<List<dynamic>>(_options);
-    late List<MealDetailsDto> _value;
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late MealDetailsDto _value;
     try {
-      _value =
-          _result.data!
-              .map(
-                (dynamic i) =>
-                    MealDetailsDto.fromJson(i as Map<String, dynamic>),
-              )
-              .toList();
+      _value = MealDetailsDto.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -83,12 +72,12 @@ class _MealApiImpl implements MealApiImpl {
   }
 
   @override
-  Future<List<MealItemDto>> getMeals(String category) async {
+  Future<MealDto> getMeals(String category) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'c': category};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<List<MealItemDto>>(
+    final _options = _setStreamType<MealDto>(
       Options(method: 'GET', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
@@ -98,15 +87,10 @@ class _MealApiImpl implements MealApiImpl {
           )
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
-    final _result = await _dio.fetch<List<dynamic>>(_options);
-    late List<MealItemDto> _value;
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late MealDto _value;
     try {
-      _value =
-          _result.data!
-              .map(
-                (dynamic i) => MealItemDto.fromJson(i as Map<String, dynamic>),
-              )
-              .toList();
+      _value = MealDto.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

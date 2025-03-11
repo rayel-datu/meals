@@ -3,7 +3,7 @@ import 'package:uni_life_exam/features/meals/entities/dto/meal_details_dto.dart'
 import 'package:uni_life_exam/features/meals/entities/dto/meal_item_dto.dart';
 
 abstract class MealApi {
-  Future<List<CategoryDto>> getCategories();
-  Future<List<MealItemDto>> getMeals(String category);
-  Future<List<MealDetailsDto>> getMealDetailsById(String id);
+  Future<CategoryDto> getCategories();
+  Future<MealDto> getMeals(String category);
+  Future<MealDetailsDto> getMealDetailsById(String id);
 }

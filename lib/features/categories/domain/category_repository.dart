@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:uni_life_exam/app/error/meal_exceptions.dart';
-import 'package:uni_life_exam/features/categories/data/meal_api.dart';
+import 'package:uni_life_exam/app/data/data/meal_api.dart';
 import 'package:uni_life_exam/features/categories/entities/models/category_model.dart';
 
 class CategoryRepository {

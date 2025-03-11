@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:uni_life_exam/features/categories/data/meal_api.dart';
+import 'package:uni_life_exam/app/data/data/meal_api.dart';
 import 'package:uni_life_exam/features/categories/entities/dto/category_dto.dart';
 import 'package:uni_life_exam/features/meals/entities/dto/meal_details_dto.dart';
 import 'package:uni_life_exam/features/meals/entities/dto/meal_item_dto.dart';
@@ -16,15 +16,15 @@ abstract class MealApiImpl implements MealApi {
   }) = _MealApiImpl;
   @override
   @GET('/1/categories.php')
-  Future<List<CategoryDto>> getCategories();
+  Future<CategoryDto> getCategories();
 
   /// Query parameters [i] for id
   @override
   @GET('/1/lookup.php')
-  Future<List<MealDetailsDto>> getMealDetailsById(@Query('i') String id);
+  Future<MealDetailsDto> getMealDetailsById(@Query('i') String id);
 
   /// Query parameters [c] for category e.g. Seafood
   @override
   @GET('/1/filter.php')
-  Future<List<MealItemDto>> getMeals(@Query('c') String category);
+  Future<MealDto> getMeals(@Query('c') String category);
 }

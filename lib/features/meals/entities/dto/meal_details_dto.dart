@@ -2,8 +2,20 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'meal_details_dto.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class MealDetailsDto {
+  final List<MealDetailsItemDto> meals;
+
+  MealDetailsDto(this.meals);
+
+  factory MealDetailsDto.fromJson(Map<String, dynamic> json) =>
+      _$MealDetailsDtoFromJson(json);
+
+  Map<String, dynamic> toJson() => _$MealDetailsDtoToJson(this);
+}
+
+@JsonSerializable()
+class MealDetailsItemDto {
   String? idMeal;
   String? strMeal;
   String? strMealAlternate;
@@ -58,7 +70,7 @@ class MealDetailsDto {
   String? strCreativeCommonsConfirmed;
   String? dateModified;
 
-  MealDetailsDto({
+  MealDetailsItemDto({
     this.idMeal,
     this.strMeal,
     this.strMealAlternate,
@@ -114,8 +126,8 @@ class MealDetailsDto {
     this.dateModified,
   });
 
-  factory MealDetailsDto.fromJson(Map<String, dynamic> json) =>
-      _$MealDetailsDtoFromJson(json);
+  factory MealDetailsItemDto.fromJson(Map<String, dynamic> json) =>
+      _$MealDetailsItemDtoFromJson(json);
 
-  Map<String, dynamic> toJson() => _$MealDetailsDtoToJson(this);
+  Map<String, dynamic> toJson() => _$MealDetailsItemDtoToJson(this);
 }
