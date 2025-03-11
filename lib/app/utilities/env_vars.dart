@@ -3,6 +3,6 @@ class EnvVars {
 
   static String getBaseUrl() => const String.fromEnvironment(
     _baseUrl,
-    defaultValue: 'www.themealdb.com/api/json/v1',
+    defaultValue: 'https://www.themealdb.com/api/json/v1',
   );
 }

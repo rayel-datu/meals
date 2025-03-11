@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meal_app/features/categories/presentation/atoms/category_list_item.dart';
+import 'package:meal_app/app/stories/category_stories.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 
 class StoryBookApp extends StatelessWidget {
@@ -7,13 +7,6 @@ class StoryBookApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Storybook(
-      stories: [
-        Story(
-          name: 'Category/Atoms/Category List Item',
-          builder: (context) => CategoryListItem(),
-        ),
-      ],
-    );
+    return Storybook(stories: [...CategoryStories().stories]);
   }
 }
