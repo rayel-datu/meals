@@ -9,7 +9,16 @@
             "request": "launch",
             "type": "dart",
             "args": [
-                "--dart-define=BASE_URL=www.themealdb.com/api/json/v1"
+                "--dart-define=BASE_URL=https://www.themealdb.com/api/json/v1"
+            ]
+        },
+        {
+            "name": "meal_app [story book]",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_story_book.dart",
+            "args": [
+                "--dart-define=BASE_URL=https://www.themealdb.com/api/json/v1"
             ]
         },
         {
