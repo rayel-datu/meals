@@ -20,7 +20,7 @@ void main() {
 
   setUp(() {
     mealApi = MockMealApi();
-    categoryRepository = CategoryRepository(mealApi);
+    categoryRepository = CategoryRepository(mealApi: mealApi);
 
     categoryDto = MockCategoryDto();
     categoryItems = List.generate(20, (index) => MockCategoryItemDto());
