@@ -9,7 +9,7 @@
             "request": "launch",
             "type": "dart",
             "args": [
-                "--dart-define=BASE_URL=https://pokeapi.co/api/v2/"
+                "--dart-define=BASE_URL=www.themealdb.com/api/json/v1"
             ]
         },
         {
