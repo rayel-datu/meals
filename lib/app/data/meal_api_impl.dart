@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:uni_life_exam/app/data/data/meal_api.dart';
+import 'package:uni_life_exam/app/data/meal_api.dart';
 import 'package:uni_life_exam/features/categories/entities/dto/category_dto.dart';
 import 'package:uni_life_exam/features/meals/entities/dto/meal_details_dto.dart';
 import 'package:uni_life_exam/features/meals/entities/dto/meal_item_dto.dart';

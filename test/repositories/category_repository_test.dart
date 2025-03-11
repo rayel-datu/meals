@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:uni_life_exam/app/data/data/meal_api.dart';
+import 'package:uni_life_exam/app/data/meal_api.dart';
 import 'package:uni_life_exam/app/error/meal_exceptions.dart';
 import 'package:uni_life_exam/features/categories/domain/category_repository.dart';
 import 'package:uni_life_exam/features/categories/entities/dto/category_dto.dart';
