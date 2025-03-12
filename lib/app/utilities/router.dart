@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:meal_app/features/categories/presentation/category_screen.dart';
+import 'package:meal_app/features/meals/presentation/meal_screen.dart';
 
 class MealRouter {
   static GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey();
@@ -18,7 +19,10 @@ class MealRouter {
             GoRoute(
               path: 'category/:category/meals',
               name: 'meals',
-              builder: (context, state) => SizedBox.shrink(),
+              builder:
+                  (context, state) => MealScreen(
+                    category: state.pathParameters['category'] ?? '',
+                  ),
               routes: [
                 GoRoute(
                   path: ':mealId/details',

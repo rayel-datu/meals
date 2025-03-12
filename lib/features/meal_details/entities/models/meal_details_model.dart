@@ -1,4 +1,4 @@
-import 'package:meal_app/features/meals/entities/dto/meal_details_dto.dart';
+import 'package:meal_app/features/meal_details/entities/dtos/meal_details_dto.dart';
 
 class MealDetailsModel {
   final String? name;

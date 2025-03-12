@@ -5,9 +5,9 @@ import 'package:mockito/mockito.dart';
 import 'package:meal_app/app/data/meal_api.dart';
 import 'package:meal_app/app/error/meal_exceptions.dart';
 import 'package:meal_app/features/meals/domain/repositories/meal_repository.dart';
-import 'package:meal_app/features/meals/entities/dto/meal_details_dto.dart';
+import 'package:meal_app/features/meal_details/entities/dtos/meal_details_dto.dart';
 import 'package:meal_app/features/meals/entities/dto/meal_item_dto.dart';
-import 'package:meal_app/features/meals/entities/models/meal_details_model.dart';
+import 'package:meal_app/features/meal_details/entities/models/meal_details_model.dart';
 import 'package:meal_app/features/meals/entities/models/meal_item_model.dart';
 
 import 'meal_repository_test.mocks.dart';

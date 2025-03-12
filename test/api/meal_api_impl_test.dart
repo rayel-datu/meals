@@ -5,7 +5,7 @@ import 'package:mockito/mockito.dart';
 import 'package:meal_app/app/data/meal_api.dart';
 import 'package:meal_app/app/data/meal_api_impl.dart';
 import 'package:meal_app/features/categories/entities/dto/category_dto.dart';
-import 'package:meal_app/features/meals/entities/dto/meal_details_dto.dart';
+import 'package:meal_app/features/meal_details/entities/dtos/meal_details_dto.dart';
 import 'package:meal_app/features/meals/entities/dto/meal_item_dto.dart';
 
 import 'meal_api_impl_test.mocks.dart';

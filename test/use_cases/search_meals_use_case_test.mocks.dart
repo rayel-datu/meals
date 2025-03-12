@@ -8,13 +8,13 @@ import 'dart:async' as _i9;
 import 'package:meal_app/app/data/meal_api.dart' as _i2;
 import 'package:meal_app/features/categories/entities/dto/category_dto.dart'
     as _i3;
+import 'package:meal_app/features/meal_details/entities/dtos/meal_details_dto.dart'
+    as _i5;
+import 'package:meal_app/features/meal_details/entities/models/meal_details_model.dart'
+    as _i8;
 import 'package:meal_app/features/meals/domain/repositories/meal_repository.dart'
     as _i6;
-import 'package:meal_app/features/meals/entities/dto/meal_details_dto.dart'
-    as _i5;
 import 'package:meal_app/features/meals/entities/dto/meal_item_dto.dart' as _i4;
-import 'package:meal_app/features/meals/entities/models/meal_details_model.dart'
-    as _i8;
 import 'package:meal_app/features/meals/entities/models/meal_item_model.dart'
     as _i7;
 import 'package:mockito/mockito.dart' as _i1;

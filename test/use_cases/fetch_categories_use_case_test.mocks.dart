@@ -12,7 +12,7 @@ import 'package:meal_app/features/categories/entities/dto/category_dto.dart'
     as _i3;
 import 'package:meal_app/features/categories/entities/models/category_model.dart'
     as _i7;
-import 'package:meal_app/features/meals/entities/dto/meal_details_dto.dart'
+import 'package:meal_app/features/meal_details/entities/dtos/meal_details_dto.dart'
     as _i5;
 import 'package:meal_app/features/meals/entities/dto/meal_item_dto.dart' as _i4;
 import 'package:mockito/mockito.dart' as _i1;

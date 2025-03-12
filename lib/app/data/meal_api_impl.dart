@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:meal_app/app/data/meal_api.dart';
 import 'package:meal_app/features/categories/entities/dto/category_dto.dart';
-import 'package:meal_app/features/meals/entities/dto/meal_details_dto.dart';
+import 'package:meal_app/features/meal_details/entities/dtos/meal_details_dto.dart';
 import 'package:meal_app/features/meals/entities/dto/meal_item_dto.dart';
 
 part 'meal_api_impl.g.dart';

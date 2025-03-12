@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:meal_app/app/data/meal_api.dart';
 import 'package:meal_app/app/error/meal_exceptions.dart';
-import 'package:meal_app/features/meals/entities/models/meal_details_model.dart';
+import 'package:meal_app/features/meal_details/entities/models/meal_details_model.dart';
 import 'package:meal_app/features/meals/entities/models/meal_item_model.dart';
 
 class MealRepository {
