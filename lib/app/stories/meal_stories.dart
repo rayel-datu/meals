@@ -18,6 +18,7 @@ class MealStories {
                 initial: 'https://picsum.photos/seed/picsum/200/300',
               ),
             ),
+            category: 'Seafood',
           ),
     ),
     Story(
@@ -32,6 +33,7 @@ class MealStories {
                 'https://picsum.photos/id/${index + 1}/200/300',
               ),
             ),
+            category: 'Seafood',
           ),
     ),
     Story(
