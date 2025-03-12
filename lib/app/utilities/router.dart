@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:meal_app/features/categories/presentation/category_screen.dart';
+import 'package:meal_app/features/meal_details/presentation/meal_details_screen.dart';
 import 'package:meal_app/features/meals/presentation/meal_screen.dart';
 
 class MealRouter {
@@ -27,7 +28,10 @@ class MealRouter {
                 GoRoute(
                   path: ':mealId/details',
                   name: 'mealDetails',
-                  builder: (context, state) => SizedBox.shrink(),
+                  builder:
+                      (context, state) => MealDetailsScreen(
+                        mealId: state.pathParameters['mealId'] ?? '',
+                      ),
                 ),
               ],
             ),

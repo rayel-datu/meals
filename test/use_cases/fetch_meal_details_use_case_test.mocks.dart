@@ -195,4 +195,13 @@ class MockMealDetailsModel extends _i1.Mock implements _i8.MealDetailsModel {
             returnValueForMissingStub: <_i8.MealIngredient>[],
           )
           as List<_i8.MealIngredient>);
+
+  @override
+  List<String> get tags =>
+      (super.noSuchMethod(
+            Invocation.getter(#tags),
+            returnValue: <String>[],
+            returnValueForMissingStub: <String>[],
+          )
+          as List<String>);
 }

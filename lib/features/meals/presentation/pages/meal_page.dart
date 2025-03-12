@@ -59,7 +59,11 @@ class _MealPageState extends State<MealPage> {
                   Expanded(
                     child:
                         state.whenOrNull(
-                          loaded: (meals) => MealItemList(meals: meals),
+                          loaded:
+                              (meals) => MealItemList(
+                                meals: meals,
+                                category: category,
+                              ),
                           emptyResults:
                               () => MealEmptyWidget(
                                 keyword: _searchController.text,

@@ -6,6 +6,7 @@ import 'package:meal_app/app/data/meal_api_impl.dart';
 import 'package:meal_app/features/categories/domain/repositories/category_repository.dart';
 import 'package:meal_app/features/categories/domain/use_cases/fetch_categories_use_case.dart';
 import 'package:meal_app/features/categories/domain/use_cases/search_categories_use_case.dart';
+import 'package:meal_app/features/meal_details/domain/use_cases/fetch_meal_details_use_case.dart';
 import 'package:meal_app/features/meals/domain/repositories/meal_repository.dart';
 import 'package:meal_app/features/meals/domain/use_cases/fetch_meals_use_case.dart';
 import 'package:meal_app/features/meals/domain/use_cases/search_meals_use_case.dart';
@@ -43,6 +44,9 @@ class Dependencies {
     );
     GetIt.instance.registerLazySingleton<SearchMealsUseCase>(
       () => SearchMealsUseCase(),
+    );
+     GetIt.instance.registerLazySingleton<FetchMealDetailUseCase>(
+      () => FetchMealDetailUseCase(),
     );
   }
 }

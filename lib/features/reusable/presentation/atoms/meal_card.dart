@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class MealCard extends Card {
-  MealCard({super.key, Widget? child})
+  MealCard({super.key, Widget? child, double maxHeight = double.infinity})
     : super(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ConstrainedBox(
-            constraints: BoxConstraints(maxHeight: 500),
+            constraints: BoxConstraints(maxHeight: maxHeight),
             child: child,
           ),
         ),

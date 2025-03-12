@@ -8,6 +8,7 @@ class MealDetailsModel {
   final List<MealIngredient> ingredients;
   final String? thumbnail;
   final String? youtubeLink;
+  final List<String> tags;
 
   MealDetailsModel(
     this.name,
@@ -17,6 +18,7 @@ class MealDetailsModel {
     this.ingredients,
     this.thumbnail,
     this.youtubeLink,
+    this.tags,
   );
 
   // Create a model based on the json to a more useable
@@ -51,7 +53,12 @@ class MealDetailsModel {
     );
 
     // convert the instruction string into a list by spliting the String with [\r\n]
-    final instructions = dto.strInstructions?.split('\\r\\n') ?? [];
+    final instructions = dto.strInstructions?.split('\r\n') ?? [];
+
+    instructions.removeWhere((element) => element.trim().isEmpty);
+
+    // split the tags string to create a list
+    final tags = (dto.strTags ?? '').split(',');
 
     return MealDetailsModel(
       dto.strMeal,
@@ -61,6 +68,7 @@ class MealDetailsModel {
       ingredients,
       dto.strMealThumb,
       dto.strYoutube,
+      tags,
     );
   }
 }

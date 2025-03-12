@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_app/app/stories/category_stories.dart';
+import 'package:meal_app/app/stories/meal_detail_stories.dart';
+import 'package:meal_app/app/stories/meal_stories.dart';
 import 'package:meal_app/app/utilities/dependencies.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 
@@ -21,7 +23,11 @@ class _StoryBookAppState extends State<StoryBookApp> {
   Widget build(BuildContext context) {
     return Storybook(
       initialStory: CategoryStories().stories.first.name,
-      stories: [...CategoryStories().stories],
+      stories: [
+        ...CategoryStories().stories,
+        ...MealStories().stories,
+        ...MealDetailStories().stories,
+      ],
     );
   }
 }
