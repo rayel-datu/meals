@@ -10,7 +10,7 @@ class CategoryModel implements SearchableModel {
   factory CategoryModel.fromDto(CategoryItemDto dto) => CategoryModel(
     dto.strCategory,
     dto.strCategoryThumb,
-    dto.strCategoryDescription,
+    dto.strCategoryDescription.trim(),
   );
 
   @override
