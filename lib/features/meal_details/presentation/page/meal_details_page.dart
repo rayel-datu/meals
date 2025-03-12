@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meal_app/features/meal_details/presentation/atoms/meal_details_step.dart';
 import 'package:meal_app/features/meal_details/presentation/cubit/meal_details_cubit.dart';
 import 'package:meal_app/features/meal_details/presentation/cubit/meal_details_state.dart';
 import 'package:meal_app/features/meal_details/presentation/molecules/meal_details_app_bar.dart';
@@ -32,9 +31,12 @@ class _MealDetailsPageState extends State<MealDetailsPage> {
       builder: (context, state) {
         return state.whenOrNull(
               loading:
-                  () => Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [MealLoadingIndicator()],
+                  () => Material(
+                    color: Theme.of(context).scaffoldBackgroundColor,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [MealLoadingIndicator()],
+                    ),
                   ),
               loaded: (mealDetail) {
                 final widgets = [
@@ -48,6 +50,7 @@ class _MealDetailsPageState extends State<MealDetailsPage> {
                 ];
                 return SafeArea(
                   child: Material(
+                    color: Theme.of(context).scaffoldBackgroundColor,
                     child: CustomScrollView(
                       physics: AlwaysScrollableScrollPhysics(),
                       slivers: [
