@@ -2,7 +2,6 @@ import 'package:meal_app/features/categories/entities/models/category_model.dart
 import 'package:meal_app/features/categories/presentation/category_screen.dart';
 import 'package:meal_app/features/categories/presentation/molecules/category_list_item.dart';
 import 'package:meal_app/features/categories/presentation/organisms/category_list.dart';
-import 'package:meal_app/features/categories/presentation/pages/category_page.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 
 class CategoryStories {
