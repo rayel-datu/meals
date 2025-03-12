@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_app/app/utilities/dependencies.dart';
+import 'package:meal_app/app/utilities/router.dart';
 
 class MealApp extends StatefulWidget {
   const MealApp({super.key});
@@ -18,6 +19,6 @@ class _MealAppState extends State<MealApp> {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp.router(routerConfig: MealRouter().routerConfig());
   }
 }
